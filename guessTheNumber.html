@@ -12,10 +12,14 @@
       justify-content: center;
     }
 
+    h1{
+      margin-bottom: 0;
+    }
+    
     #container{
       margin-top: 10%;
       background-color: black;
-      color: white;
+      color: rgb(255, 237, 215);
       display: inline-block;
       padding: 10px;
     }
@@ -26,11 +30,12 @@
     <h1>Guess the number from 1 to 10</h1>
     <p>if you guess right you won Note: attempts 10</p>
     <div>
-      <input type="number" id="number">
+      <input type="number" id="number" value="1">
       <button id="guess-btn" onclick="checkBothNumbers()">Guess</button>
+      <span id="answer">Guess</span>
     </div>
-    <div id="answer">Guess</div>
-    <div id="number-from-random">Result: <span id="result-number"></span> </div>
+    <br>
+    <div id="number-from-random">Random Number: <span id="result-number"></span> </div>
   </div>
   
   <script>
