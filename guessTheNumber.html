@@ -4,14 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guess!</title>
+  <style>
+    body{
+      background-color: bisque;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    #container{
+      margin-top: 10%;
+      background-color: black;
+      color: white;
+      display: inline-block;
+      padding: 10px;
+    }
+  </style>
 </head>
 <body>
   <div id="container">
     <h1>Guess the number from 1 to 10</h1>
     <p>if you guess right you won Note: attempts 10</p>
-
-    <input type="number" id="number">
-    <button id="guess-btn" onclick="checkBothNumbers()">Guess</button>
+    <div>
+      <input type="number" id="number">
+      <button id="guess-btn" onclick="checkBothNumbers()">Guess</button>
+    </div>
     <div id="answer">Guess</div>
     <div id="number-from-random">Result: <span id="result-number"></span> </div>
   </div>
