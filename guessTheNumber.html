@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess!</title>
+</head>
+<body>
+  <div id="container">
+    <h1>Guess the number from 1 to 10</h1>
+    <p>if you guess right you won Note: attempts 10</p>
+
+    <input type="number" id="number">
+    <button id="guess-btn" onclick="checkBothNumbers()">Guess</button>
+    <div id="answer">Guess</div>
+    <div id="number-from-random">Result: <span id="result-number"></span> </div>
+  </div>
+  
+  <script>
+
+    var globalCount = 0;
+
+    function userGuessed(){
+      let userNumber = Number(document.getElementById("number").value);
+      return userNumber
+    }
+
+    function checkBothNumbers(){
+      globalCount++;
+      if (globalCount>10){
+        alert("You're reached the limit, Restart")
+      } else {
+        let mathRandomNum = Math.ceil(Math.random()*10);
+        document.getElementById("result-number").textContent = mathRandomNum;
+
+        if (userGuessed() == mathRandomNum){
+          document.getElementById("answer").textContent = "You're right";
+          alert("TaDA: You're right")
+        } else {
+          document.getElementById("answer").textContent = "Wrong Guess";
+        }
+      }
+    }
+
+  </script>
+
+
+</body>
+</html>
