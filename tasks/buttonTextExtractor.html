@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Text Extractor</title>
+</head>
+<body>
+  <div>
+    <h1 id="heading"></h1>
+    <button id="btn1" onclick="textExtractor(event)">myName</button> <!-- event passed here having all data abt btn-->
+    <button id="btn2" onclick="textExtractor(event)">ourName</button>
+    <button id="btn3" onclick="textExtractor(event)">yourName</button>
+  </div>
+
+  <script>
+    // event is playing now
+    // in textExtractor function we get event from btn which is having all the detail abt the btn clicked
+    let textExtractor = (event) => {
+      document.getElementById("heading").textContent = event.target.textContent
+      // console.log(event.target.textContent)
+    }
+  </script>
+</body>
+</html>
