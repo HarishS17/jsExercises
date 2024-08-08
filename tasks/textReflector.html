@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Reflector</title>
+</head>
+<body>
+  <label for="text-reflector">Enter: </label>
+  <input type="text" id="text-reflector" name="text-reflector" onkeyup="reflector()">
+  <br>
+  <div id="result"></div>
+
+  <script>
+
+    function reflector(){
+      let result = document.getElementById("text-reflector").value
+      document.getElementById("result").textContent = result
+    }
+
+  </script>
+</body>
+</html>
