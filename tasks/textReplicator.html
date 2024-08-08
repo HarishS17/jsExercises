@@ -6,7 +6,7 @@
   <title>Text Replicator</title>
 </head>
 <body>
-  <button id="hello" onclick="addHello()">Add Hello</button>
+  <button id="hello" onclick="addTag()">Add Hello</button>
   <div id="result"></div>
 
   <script>
@@ -18,6 +18,13 @@
       listTagH1.textContent = `Hello ${count}` // add text to the created tag
       resultDiv.append(listTagH1) // appending to the div 
       count ++
+    }
+
+    // or below just 4 lines
+    let addTag = () =>{
+      let divResult = document.getElementById("result")
+      divResult.innerHTML += `<h1>Hello ${count}</h1>`
+      count++
     }
   </script>
 </body>
