@@ -17,20 +17,18 @@
   </div>
 
   <script>
-    var btnCount = 1
+
     let add = () =>{
       let contentDiv = document.getElementById("content") // get content div
 
       // create new div element to add into content div when click add button
       let addDivElement = document.createElement("div") 
       addDivElement.setAttribute("class","added-div")
-      addDivElement.setAttribute("id",`btn${btnCount}`) // giving id helpful to delete this element
       addDivElement.innerHTML = document.getElementById("todo-input").value
       contentDiv.insertAdjacentElement("beforeend", addDivElement)
 
       let deleteBtn = document.createElement("button")
       deleteBtn.textContent = "Delete"
-      deleteBtn.setAttribute("id",`btn${btnCount}`)
       deleteBtn.setAttribute("class","delete-btn")
       deleteBtn.setAttribute("onclick", "deleteFunction(event)")
 
@@ -39,10 +37,9 @@
     }
 
     let deleteFunction = (event) => {
-      // console.log(document.getElementById(event.target.id))
-      // it will find for btn{count} first came element is div element so it delete whole div element
-      document.getElementById(event.target.id).remove()
-      // console.log(event.target)
+      // Instead previous version lines by getting id and delete the element
+      // we use parentElement from event.target to delete
+      event.target.parentElement.remove()
     }
 
   </script>
