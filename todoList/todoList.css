@@ -13,7 +13,7 @@ body{
   padding: 2%;
   top: 10%;
   left: 25%;
-  width: 45%;
+  width: 40%;
   height: auto;
   background-color: black;
   color: wheat;
@@ -32,6 +32,11 @@ input{
   width: 80%;
 }
 
+#add-btn{
+  min-width: 70px;
+  font-weight: bold;
+}
+
 #content{
   min-width: 200px;
   display: flex;
@@ -46,20 +51,18 @@ input{
   justify-content:space-between;
   background-color: wheat;
   color: black;
-  flex-basis: 30%;
-  flex-shrink: 1;
   margin: 10px;
   padding: 5px;
   font-weight: bold;
 }
 
 .delete-btn{
-  padding: 5px;
+  padding: 0 5px;
   background-color: black;
   color: wheat;
-  flex-basis: 20%;
-  flex-shrink: 1;
   font-weight: bold;
+  min-width: 70px;
+  max-height: 40px;
 }
 
 .delete-btn:hover{
