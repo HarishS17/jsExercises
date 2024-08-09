@@ -1,0 +1,78 @@
+body{
+  min-width: 500px;
+  background-color: bisque;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#container{
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  padding: 2%;
+  top: 10%;
+  left: 25%;
+  width: 45%;
+  height: auto;
+  background-color: black;
+  color: wheat;
+}
+
+#input-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px;
+  width: 100%;
+}
+
+input{
+  padding: 5px;
+  width: 80%;
+}
+
+#content{
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  width:100%;
+}
+
+.added-div{
+  display: flex;
+  justify-content:space-between;
+  background-color: wheat;
+  color: black;
+  flex-basis: 30%;
+  flex-shrink: 1;
+  margin: 10px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.delete-btn{
+  padding: 5px;
+  background-color: black;
+  color: wheat;
+  flex-basis: 20%;
+  flex-shrink: 1;
+  font-weight: bold;
+}
+
+.delete-btn:hover{
+  background-color: rgb(255, 31, 31);
+  color: white;
+  /* border: none; */
+}
+
+@media (max-width:750px) {
+  #content{
+    flex-direction: row;
+    gap: 1px;
+    font-size: 14px;
+    transition: 1s;
+  }
+}

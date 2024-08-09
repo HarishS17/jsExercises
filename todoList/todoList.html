@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="./todoList.css">
+</head>
+<body>
+  <div id="container">
+    <h2>TODO LIST</h2>
+    <div id="input-div">
+      <input type="text" id="todo-input">
+      <button onclick="add()">Add</button>
+    </div>
+    <div id="content"></div>
+  </div>
+
+  <script>
+    var btnCount = 1
+    let add = () =>{
+      let contentDiv = document.getElementById("content") // get content div
+
+      // create new div element to add into content div when click add button
+      let addDivElement = document.createElement("div") 
+      addDivElement.setAttribute("class","added-div")
+      addDivElement.setAttribute("id",`btn${btnCount}`) // giving id helpful to delete this element
+      addDivElement.innerHTML = document.getElementById("todo-input").value
+      contentDiv.insertAdjacentElement("beforeend", addDivElement)
+
+      let deleteBtn = document.createElement("button")
+      deleteBtn.textContent = "Delete"
+      deleteBtn.setAttribute("id",`btn${btnCount}`)
+      deleteBtn.setAttribute("class","delete-btn")
+      deleteBtn.setAttribute("onclick", "deleteFunction(event)")
+
+      addDivElement.append(deleteBtn) // added del btn inside created div element above
+      btnCount++ // count increased 
+    }
+
+    let deleteFunction = (event) => {
+      // console.log(document.getElementById(event.target.id))
+      // it will find for btn{count} first came element is div element so it delete whole div element
+      document.getElementById(event.target.id).remove()
+      // console.log(event.target)
+    }
+
+  </script>
+</body>
+</html>
