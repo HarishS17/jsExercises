@@ -4,19 +4,14 @@ document.getElementById("plus-btn").addEventListener("click", ()=>{
   document.getElementById("popup-box").style.display = "block"
 })
 
-document.getElementById("cancel-btn").addEventListener("click", ()=>{
+document.getElementById("cancel-btn").addEventListener("click", (event)=>{
+  event.preventDefault() // to prevent form action when clicking both add and cancel btns
   document.getElementById("popup-overlay").style.display = "none"
   document.getElementById("popup-box").style.display = "none"
 })
 
-let createBtnEle = () =>{
-  let createBtn = document.createElement("button")
-  createBtn.setAttribute("class","delete-btn")
-  createBtn.textContent = "DELETE"
-  return createBtn
-}
-
-document.getElementById("add-btn").addEventListener("click", ()=>{
+document.getElementById("add-btn").addEventListener("click", (event)=>{
+  event.preventDefault()
   let titleInput = document.getElementById("title-input").value
   let authorInput = document.getElementById("author-input").value
   let descriptionInput = document.getElementById("description-input").value
@@ -28,7 +23,6 @@ document.getElementById("add-btn").addEventListener("click", ()=>{
           <p>${descriptionInput}</p>
           <button class="delete-btn" onclick="deleteBtn(event)">DELETE</button>
         </div>`
-
 })
 
 

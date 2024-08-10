@@ -29,11 +29,11 @@
         <input type="text" placeholder="Add a title" id="title-input">
         <input type="text" placeholder="Author name" id="author-input">
         <textarea placeholder="Book Description" id="description-input"></textarea>
-      </form>
-      <!-- previously I put these 2 btns inside form so its not working perfectly -->
+        <!-- found the reason why its not working inside form, 
+         so that preventDefault added to btns event listener in Js -->
         <button id="add-btn">ADD</button>
         <button id="cancel-btn">CANCEL</button>
-      
+      </form>  
     </div>
     <button id="plus-btn">+</button>
   </div>
