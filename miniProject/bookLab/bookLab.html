@@ -5,9 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Lab</title>
   <link rel="stylesheet" href="./bookLab.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+  <div id="container">
+    <div id="nav-bar">
+      <h2>BOOK LAB</h2>
+    </div>
+    <div id="book-container">
+      <div class="each-book-container">
+        <h2>Rich Dad Poor Dad</h2>
+        <h4>-Robert</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus inventore assumenda placeat provident aliquid ipsum quos, quis, minus aliquam nostrum vitae est minima aspernatur eaque quod repellendus dignissimos expedita! Quas.</p>
+        <button class="delete-btn">DELETE</button>
+      </div>
+    </div>
+    <div id="popup-overlay"></div>
+    <div id="popup-box">
+      <h4>ADD BOOK</h4>
+      <form>
+        <input type="text" placeholder="Add a title">
+        <input type="text" placeholder="Author name">
+        <textarea placeholder="Book Description"></textarea>
+      </form>
+      <!-- previously I put these 2 btns inside form so its not working perfectly -->
+        <button id="add-btn">ADD</button>
+        <button id="cancel-btn">CANCEL</button>
+      
+    </div>
+    <button id="plus-btn">+</button>
+  </div>
   <script src="./bookLab.js"></script>
 </body>
 </html>
