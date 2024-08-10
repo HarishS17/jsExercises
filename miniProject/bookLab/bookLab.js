@@ -4,10 +4,14 @@ document.getElementById("plus-btn").addEventListener("click", ()=>{
   document.getElementById("popup-box").style.display = "block"
 })
 
-document.getElementById("cancel-btn").addEventListener("click", (event)=>{
-  event.preventDefault() // to prevent form action when clicking both add and cancel btns
+function displayNoneFun(){
   document.getElementById("popup-overlay").style.display = "none"
   document.getElementById("popup-box").style.display = "none"
+}
+
+document.getElementById("cancel-btn").addEventListener("click", (event)=>{
+  event.preventDefault() // to prevent form action when clicking both add and cancel btns
+  displayNoneFun()
 })
 
 document.getElementById("add-btn").addEventListener("click", (event)=>{
@@ -23,6 +27,7 @@ document.getElementById("add-btn").addEventListener("click", (event)=>{
           <p>${descriptionInput}</p>
           <button class="delete-btn" onclick="deleteBtn(event)">DELETE</button>
         </div>`
+  displayNoneFun()
 })
 
 
