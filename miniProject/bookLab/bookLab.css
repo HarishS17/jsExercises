@@ -19,7 +19,7 @@ body{
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .each-book-container{

@@ -17,16 +17,28 @@ let createBtnEle = () =>{
 }
 
 document.getElementById("add-btn").addEventListener("click", ()=>{
+  let titleInput = document.getElementById("title-input").value
+  let authorInput = document.getElementById("author-input").value
+  let descriptionInput = document.getElementById("description-input").value
+
   let bookContainer = document.getElementById("book-container")
   bookContainer.innerHTML += `<div class="each-book-container">
-          <h2></h2>
-          <h4>-</h4>
-          <p></p>
-          <button class="delete-btn">DELETE</button>
+          <h2>${titleInput}</h2>
+          <h4>-${authorInput}</h4>
+          <p>${descriptionInput}</p>
+          <button class="delete-btn" onclick="deleteBtn(event)">DELETE</button>
         </div>`
 
 })
 
-document.getElementById("delete-btn").addEventListener("click",()=>{
+
+// document.querySelector(".delete-btn").addEventListener("click",function(event){
+//   console.log(event)
+//   console.log(event.target)
+//   console.log(event.target.parentElement)
+//   // event.target.parentElement.remove()
+// })
+// instead above function added event handler onclick to delete btn
+function deleteBtn(event){
   event.target.parentElement.remove()
-})
+}

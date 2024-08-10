@@ -19,16 +19,16 @@
         <h2>Rich Dad Poor Dad</h2>
         <h4>-Robert</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus inventore assumenda placeat provident aliquid ipsum quos, quis, minus aliquam nostrum vitae est minima aspernatur eaque quod repellendus dignissimos expedita! Quas.</p>
-        <button class="delete-btn">DELETE</button>
+        <button class="delete-btn" onclick="deleteBtn(event)">DELETE</button>
       </div>
     </div>
     <div id="popup-overlay"></div>
     <div id="popup-box">
       <h4>ADD BOOK</h4>
       <form>
-        <input type="text" placeholder="Add a title">
-        <input type="text" placeholder="Author name">
-        <textarea placeholder="Book Description"></textarea>
+        <input type="text" placeholder="Add a title" id="title-input">
+        <input type="text" placeholder="Author name" id="author-input">
+        <textarea placeholder="Book Description" id="description-input"></textarea>
       </form>
       <!-- previously I put these 2 btns inside form so its not working perfectly -->
         <button id="add-btn">ADD</button>
